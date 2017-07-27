@@ -69,7 +69,7 @@ export default {
 //          console.log(err);
 //        });
 
-        this.axios.post('http://dev.h5.xiaozhangbang.org/365/project/add_comment', {
+        this.axios.post('/365/project/add_comment', {
           id: $this.id,
           name: $this.name,
           mobile: $this.mobile,
