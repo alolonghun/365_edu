@@ -93,7 +93,7 @@ export default {
 html, body {
   background: #fff;
   .weui-cells {
-    font-size: 16px;
+    font-size: .32rem;
     margin-top: 15px;
     .weui-cell {
       padding: 15px 15px;
@@ -103,14 +103,15 @@ html, body {
     display: none;
   }
   .submit {
-    width: 240px;
-    height: 50px;
+    width: 3.2rem;
+    height: .7rem;
     background: #359dda;
     border-radius: 5px;
     text-align: center;
-    line-height: 50px;
+    line-height: .7rem;
     color: #fff;
     margin: 220px auto 0;
+    font-size: .32rem;
   }
 }
 </style>

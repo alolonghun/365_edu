@@ -62,8 +62,8 @@ export default {
     align-items: center;
     padding-right: 15px;
     .list-img {
-      width: 80px;
-      height: 80px;
+      width: 1.6rem;
+      height: 1.6rem;
       margin-right: 15px;
     }
     .list-content {
@@ -71,11 +71,11 @@ export default {
       flex-direction: column;
       h3 {
         font-weight: 400;
-        font-size: 18px;
+        font-size: .36rem;
       }
       .content-font {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: .28rem;
+        line-height: .4rem;
         color: #999;
       }
       .view-and-comment {
@@ -87,12 +87,12 @@ export default {
           flex-direction: row;
           align-items: center;
           justify-content: flex-start;
-          font-size: 16px;
+          font-size: .32rem;
           margin-right: 15px;
         }
         .icon-view, .icon-comment {
-          width: 20px;
-          height: 20px;
+          width: .4rem;
+          height: .4rem;
           margin-right: 4px;
         }
       }

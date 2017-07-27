@@ -14,6 +14,7 @@ export default {
 <style lang="less">
 @import '~vux/src/styles/reset.less';
 @import './styles/reset.css';
+@import './styles/_reset.less';
 
 body {
   font-family: '微软雅黑';

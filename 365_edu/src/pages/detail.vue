@@ -3,7 +3,7 @@
     <sticky>
       <x-header :title="detail_data.name" :right-options="{showMore: false}"></x-header>
     </sticky>
-    <swiper :aspect-ratio="300/800" dots-position="center">
+    <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in banner_list" :key="index">
         <img :src="item" :alt="index">
       </swiper-item>
@@ -14,7 +14,7 @@
     </div>
     <div class="content content_2">
       <h3>项目详情介绍</h3>
-      <img :src="detail_data.content_img" alt="">
+      <img v-for="item in detail_data.content_img" :src="item" alt="">
       <p v-html="detail_data.eintro"></p>
     </div>
     <div class="content content_3">
@@ -74,6 +74,7 @@ body {
 
 .swiper-img img {
   width: 100%;
+  height: 100%;
 }
 
 .content {
@@ -88,31 +89,32 @@ body {
     margin-top: 15px;
   }
   img {
-    height: 150px;
+    width: 98%;
+    margin: 10px auto;
   }
   h3 {
     font-weight: normal;
-    font-size: 16px;
-    line-height: 36px;
+    font-size: .32rem;
+    line-height: .72rem;
     padding-left: 10px;
   }
   p {
-    font-size: 14px;
+    font-size: .26rem;
     color: #929292;
     padding: 0 5px;
   }
 }
 .message {
   width: 100%;
-  height: 60px;
+  height: 1.2rem;
   background: #359dda;
   text-align: center;
-  line-height: 60px;
+  line-height: 1.2rem;
   color: #fff;
-  font-size: 18px;
+  font-size: .36rem;
   img {
-    width: 18px;
-    height: 16px;
+    width: .36rem;
+    height: .32rem;
   }
 }
 </style>

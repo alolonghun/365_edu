@@ -1,10 +1,11 @@
 <template>
   <div>
     <x-header title="365教育展" :right-options="{showMore: false}"></x-header>
-    <swiper :aspect-ratio="300/800" dots-position="center">
+    <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in img_list" :key="index">
-        <!--<router-link></router-link>-->
-        <img :src="item.img" :alt="index">
+        <router-link :to="{path: '/detail', query: {detailId: item.id}}">
+          <img :src="item.img" :alt="index">
+        </router-link>
       </swiper-item>
     </swiper>
     <div class="title">
@@ -37,7 +38,7 @@ export default {
     var $this = this;
     this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/get_banner_list')
         .then(function (res) {
-          console.log(res.data.data);
+//          console.log(res.data.data);
           $this.img_list = res.data.data;
         })
         .catch(function (error) {
@@ -67,10 +68,9 @@ export default {
 html,body {
   background: #fff;
 }
-
 .swiper-img img {
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 
 .title {
@@ -81,14 +81,14 @@ html,body {
   padding: 10px 0 20px;
   background: #fff;
   span {
-    width: 25px;
+    width: .5rem;
     height: 1px;
     display: inline-block;
     background: #000;
   }
   h2 {
     font-weight: normal;
-    font-size: 22px;
+    font-size: .44rem;
     margin: 0 20px;
     letter-spacing: 4px;
   }
