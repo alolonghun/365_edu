@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="365教育展" :left-option="{showBack: false}" :right-options="{showMore: false}"></x-header>
+    <x-header title="365教育展" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>
     <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in img_list" :key="index">
         <router-link :to="{path: '/detail', query: {detailId: item.id}}">
@@ -36,7 +36,7 @@ export default {
   },
   mounted () {
     var $this = this;
-    this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/get_banner_list')
+    this.axios.get('/365/project/get_banner_list')
         .then(function (res) {
 //          console.log(res.data.data);
           $this.img_list = res.data.data;
@@ -45,7 +45,7 @@ export default {
           console.log(error);
         });
 
-    this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/get_project_list')
+    this.axios.get('/365/project/get_project_list')
         .then(function (res) {
 //          console.log(res);
           $this.list_data = res.data.data;

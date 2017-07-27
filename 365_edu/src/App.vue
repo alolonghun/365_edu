@@ -18,5 +18,6 @@ export default {
 
 body {
   font-family: '微软雅黑';
+  font-size: .32rem;
 }
 </style>

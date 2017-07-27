@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="项目留言" :left-option="{showBack: false}" :right-options="{showMore: false}"></x-header>
+    <x-header title="项目留言" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>
     <group>
       <x-input v-model="name" label-width="1.6rem" title="*联系人" placeholder="请输入您的姓名" placeholder-align="right"></x-input>
       <x-input v-model.number="mobile" label-width="1.6rem" title="*手机" placeholder="请输入您的手机" placeholder-align="right"></x-input>
@@ -114,7 +114,7 @@ export default {
         params.append('weixin', $this.weixin);
         params.append('addr', $this.addr);
         params.append('investment_quota', $this.investment_quota);
-        this.axios.post('http://dev.h5.xiaozhangbang.org/365/project/add_comment', params)
+        this.axios.post('/365/project/add_comment', params)
           .then(function (response) {
             console.log(response);
           })
@@ -141,15 +141,15 @@ html, body {
     display: none;
   }
   .submit {
-    width: 3.2rem;
-    height: .7rem;
+    width: 5rem;
+    height: 1rem;
     background: #359dda;
     border-radius: 5px;
     text-align: center;
-    line-height: .7rem;
+    line-height: 1rem;
     color: #fff;
-    margin: 4rem auto 0;
-    font-size: .32rem;
+    margin: 3rem auto 0;
+    font-size: .36rem;
   }
 }
 </style>
