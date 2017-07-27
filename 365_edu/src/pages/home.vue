@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="365教育展" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>
+    <!--<x-header title="365教育展" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>-->
     <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in img_list" :key="index">
         <router-link :to="{path: '/detail', query: {detailId: item.id}}">
@@ -36,6 +36,7 @@ export default {
   },
   mounted () {
     var $this = this;
+    document.title = '365教育展';
     this.axios.get('/365/project/get_banner_list')
         .then(function (res) {
 //          console.log(res.data.data);

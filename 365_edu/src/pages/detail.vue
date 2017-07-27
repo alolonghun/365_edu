@@ -1,8 +1,8 @@
 <template>
   <div>
-    <sticky>
-      <x-header :title="detail_data.name" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>
-    </sticky>
+    <!--<sticky>-->
+      <!--<x-header :title="detail_data.name" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>-->
+    <!--</sticky>-->
     <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in banner_list" :key="index">
         <img :src="item" :alt="index">
@@ -54,6 +54,7 @@ export default {
         console.log(res);
         $this.banner_list = res.data.data.banner;
         $this.detail_data = res.data.data;
+        document.title = $this.detail_data.name;
       })
       .catch(function (error) {
         console.log(error);

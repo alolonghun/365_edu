@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="项目留言" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>
+    <!--<x-header title="项目留言" :left-options="{showBack: false}" :right-options="{showMore: false}"></x-header>-->
     <group>
       <x-input v-model="name" label-width="1.6rem" title="*联系人" placeholder="请输入您的姓名" placeholder-align="right"></x-input>
       <x-input v-model.number="mobile" label-width="1.6rem" title="*手机" placeholder="请输入您的手机" placeholder-align="right"></x-input>
@@ -63,6 +63,9 @@ export default {
       invest: [],
       investment_quota: 0
     }
+  },
+  mounted() {
+    document.title = document.title+'-项目留言';
   },
   vuerify: {
     name: {
