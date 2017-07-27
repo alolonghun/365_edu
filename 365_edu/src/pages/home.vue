@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="365教育展" :right-options="{showMore: false}"></x-header>
+    <x-header title="365教育展" :left-option="{showBack: false}" :right-options="{showMore: false}"></x-header>
     <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in img_list" :key="index">
         <router-link :to="{path: '/detail', query: {detailId: item.id}}">

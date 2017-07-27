@@ -1,7 +1,7 @@
 <template>
   <div>
     <sticky>
-      <x-header :title="detail_data.name" :right-options="{showMore: false}"></x-header>
+      <x-header :title="detail_data.name" :left-option="{showBack: false}" :right-options="{showMore: false}"></x-header>
     </sticky>
     <swiper :aspect-ratio="1/2" dots-position="center" :auto="true" :loop="true">
       <swiper-item class="swiper-img" v-for="(item, index) in banner_list" :key="index">
@@ -94,12 +94,12 @@ body {
   }
   h3 {
     font-weight: normal;
-    font-size: .32rem;
+    font-size: .36rem;
     line-height: .72rem;
     padding-left: 10px;
   }
   p {
-    font-size: .26rem;
+    font-size: .32rem;
     color: #929292;
     padding: 0 5px;
   }

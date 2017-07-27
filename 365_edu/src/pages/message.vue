@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-header title="项目留言" :right-options="{showMore: false}"></x-header>
+    <x-header title="项目留言" :left-option="{showBack: false}" :right-options="{showMore: false}"></x-header>
     <group>
       <x-input v-model="name" label-width="1.6rem" title="*联系人" placeholder="请输入您的姓名" placeholder-align="right"></x-input>
       <x-input v-model.number="mobile" label-width="1.6rem" title="*手机" placeholder="请输入您的手机" placeholder-align="right"></x-input>
@@ -148,7 +148,7 @@ html, body {
     text-align: center;
     line-height: .7rem;
     color: #fff;
-    margin: 220px auto 0;
+    margin: 4rem auto 0;
     font-size: .32rem;
   }
 }

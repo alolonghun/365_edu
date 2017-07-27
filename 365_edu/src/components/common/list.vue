@@ -74,8 +74,8 @@ export default {
         font-size: .36rem;
       }
       .content-font {
-        font-size: .28rem;
-        line-height: .4rem;
+        font-size: .32rem;
+        line-height: .42rem;
         color: #999;
       }
       .view-and-comment {
