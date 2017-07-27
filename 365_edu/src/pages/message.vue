@@ -49,40 +49,44 @@ export default {
   methods: {
     regTest() {
       var $this = this;
+
       if (!this.$vuerify.check()) { // 手动触发校验所有数据
         this.$vux.toast.text('信息未填写完整', 'middle')
       } else {
-//        $this.axios({
-//          method: 'post',
-//          url: 'http://dev.h5.xiaozhangbang.org/365/project/add_comment',
-//          data: {
-//            id: this.id,
-//            name: this.name,
-//            mobile: this.mobile,
-//            weixin: this.weixin,
-//            addr: this.addr,
-//            investment_quota: this.investment_quota
-//          }
-//        }).then(function () {
-//          $this.$vux.toast.text('提交成功', 'middle');
-//        }).catch(function (err) {
-//          console.log(err);
-//        });
-
-        this.axios.post('/365/project/add_comment', {
-          id: $this.id,
-          name: $this.name,
-          mobile: $this.mobile,
-          weixin: $this.weixin,
-          addr: $this.addr,
-          investment_quota: $this.investment_quota
-        })
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        $this.axios({
+          method: 'post',
+          url: '/365/project/add_comment',
+          header: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          data: {
+            id: this.id,
+            name: this.name,
+            mobile: this.mobile,
+            weixin: this.weixin,
+            addr: this.addr,
+            investment_quota: this.investment_quota
+          }
+        }).then(function () {
+          $this.$vux.toast.text('提交成功', 'middle');
+        }).catch(function (err) {
+          console.log(err);
+        });
+//        this.axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+//        this.axios.post('http://dev.h5.xiaozhangbang.org/365/project/add_comment', {
+//          id: $this.id,
+//          name: $this.name,
+//          mobile: $this.mobile,
+//          weixin: $this.weixin,
+//          addr: $this.addr,
+//          investment_quota: $this.investment_quota
+//        })
+//          .then(function (response) {
+//            console.log(response);
+//          })
+//          .catch(function (error) {
+//            console.log(error);
+//          });
       }
     }
   }
