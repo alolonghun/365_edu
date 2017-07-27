@@ -36,7 +36,7 @@ export default {
   },
   mounted () {
     var $this = this;
-    this.axios.get('/365/project/get_banner_list')
+    this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/get_banner_list')
         .then(function (res) {
 //          console.log(res.data.data);
           $this.img_list = res.data.data;
@@ -45,7 +45,7 @@ export default {
           console.log(error);
         });
 
-    this.axios.get('/365/project/get_project_list')
+    this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/get_project_list')
         .then(function (res) {
 //          console.log(res);
           $this.list_data = res.data.data;

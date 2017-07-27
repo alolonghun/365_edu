@@ -49,7 +49,7 @@ export default {
   },
   mounted() {
     var $this = this;
-    this.axios.get('/365/project/show_detail_project?id='+$this.id)
+    this.axios.get('http://dev.h5.xiaozhangbang.org/365/project/show_detail_project?id='+$this.id)
       .then(function (res) {
         console.log(res);
         $this.banner_list = res.data.data.banner;
