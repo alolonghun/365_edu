@@ -91,7 +91,7 @@ body {
   }
   img {
     width: 98%;
-    margin: 10px auto;
+    margin: 6px auto;
   }
   h3 {
     font-weight: normal;

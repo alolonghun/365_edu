@@ -27,7 +27,15 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: '365_edu',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/365/project': {
+        target: 'http://dev.h5.xiaozhangbang.org',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/365/project': '/365/project'
+        }
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
